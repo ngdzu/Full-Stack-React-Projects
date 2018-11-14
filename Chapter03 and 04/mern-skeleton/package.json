@@ -20,8 +20,9 @@
   "scripts": {
     "development": "nodemon",
     "build": "webpack --config webpack.config.client.production.js && webpack --mode=production --config webpack.config.server.js",
-    "start": "NODE_ENV=production node ./dist/server.generated.js",
-    "debug": "nodemon --inspect ./dist/server.generated.js"
+    "start": "env NODE_ENV=production node ./dist/server.generated.js",
+    "debug": "nodemon --inspect ./dist/server.generated.js", 
+    "dev": "env NODE_ENV=production node ./server/server.js"
   },
   "engines": {
     "node": "8.11.1",
